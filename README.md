@@ -4,6 +4,12 @@ Slides to accompany the basic demo: https://docs.google.com/presentation/d/1Plgc
 ## Note: ***This only works on a public repo***
 
 Clone the repo, remove the slides link and this section, push to a new repo and make the repo publc. 
+1. Create a new public repo on github
+2. git clone https://github.com/untitledteamuk/nodejs-cr-helloworld.git
+3. cd nodejs-cr-helloworld/
+4. git push https://new-repo.git
+5. remove the old repo: cd .. && rm -rf nodejs-cr-helloworld/
+6. git clone https://new-repo.git
 
 ## Pre Reqs
 
