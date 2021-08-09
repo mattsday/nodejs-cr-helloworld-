@@ -36,7 +36,12 @@ You will need to configure GKE with Cloud Run for Anthos.
 
 Once cloud shell opens talk through the process on Cloud Shell, building container using Cloud Build,pushing the deployment to GCR then deploying to CR.
 
+![Screenshot from 2021-08-09 15-58-59](https://user-images.githubusercontent.com/11318604/128727893-586280db-8be5-46a8-acb4-35964147e594.png)
+
 Once the deployment is completed press the URL to show it's worked.
+
+![Screenshot from 2021-08-09 15-59-29](https://user-images.githubusercontent.com/11318604/128727925-34721336-302f-4e73-a274-bc70d5d18c0c.png)
+
 
 ## Step 2
 
