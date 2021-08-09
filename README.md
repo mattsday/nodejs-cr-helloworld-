@@ -1,6 +1,11 @@
 ## Work in progress
 Slides to accompany the basic demo: https://docs.google.com/presentation/d/1PlgcayXFV7-qaGWFoYw7uzbY8QpIjTPOcTwZ57s0NGc/edit#slide=id.g7864721daf_0_0
 
+## Pre Req
+***This only works on a public repo***
+
+Fork the repo, remove the slides link and this section, commit and make the repo publc. 
+
 # Cloud Run Hello World Sample
 
 [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
