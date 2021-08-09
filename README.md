@@ -3,7 +3,7 @@ Slides to accompany the basic demo: https://docs.google.com/presentation/d/1Plgc
 
 ## Note: ***This only works on a public repo***
 
-Fork the repo, remove the slides link and this section, commit and make the repo publc. 
+Clone the repo, remove the slides link and this section, push to a new repo and make the repo publc. 
 
 ## Pre Reqs
 
