@@ -1,4 +1,5 @@
 ## Work in progress
+Slides to accompany the basic demo: https://docs.google.com/presentation/d/1PlgcayXFV7-qaGWFoYw7uzbY8QpIjTPOcTwZ57s0NGc/edit#slide=id.g7864721daf_0_0
 
 # Cloud Run Hello World Sample
 
@@ -30,5 +31,8 @@ Once the deployment is completed press the URL to show it's worked.
 
 ## Step 4
 
-### CloudCode Goodness
+### all private (Need a GCE instance with RDP access)
 
+## Step 5
+
+### CloudCode Goodness
