@@ -1,10 +1,16 @@
 ## Work in progress
 Slides to accompany the basic demo: https://docs.google.com/presentation/d/1PlgcayXFV7-qaGWFoYw7uzbY8QpIjTPOcTwZ57s0NGc/edit#slide=id.g7864721daf_0_0
 
-## Pre Req
-***This only works on a public repo***
+## Note: ***This only works on a public repo***
 
 Fork the repo, remove the slides link and this section, commit and make the repo publc. 
+
+## Pre Reqs
+
+If you are going to demo step 3 you will need a GKE cluster configured with cloud run for anthos.
+If you are going to demo step 4 you will need a GCE instance that you can RDP into, which also has access to the Cloud Run Service.//will add detail and image later.
+If you are going to demo step 5 you will need a IDE compatible with CloudCode (VSCode or IntelliJ) as well as a device capable of running MiniKube.
+If you are going to demo step 6 you will need to have pre-prepared the Wagtail imgae. //will add detail later.
 
 # Cloud Run Hello World Sample
 
