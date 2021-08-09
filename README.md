@@ -23,18 +23,32 @@ Once the deployment is completed press the URL to show it's worked.
 
 ## Step 2
 
-### Set Up continuous Deployment
+### Set Up Continuous Deployment
 
-
+![image](https://user-images.githubusercontent.com/11318604/128716460-253cee2e-07d6-4f0c-b6e9-60b6c35868c4.png)
 
 ## Step 3
 
 ### Deploy on CRfA setp continuous Deployment with build packs
 
+![image](https://user-images.githubusercontent.com/11318604/128716559-2f85ec2f-37ef-4a4c-93d5-b75d76d56095.png)
+
 ## Step 4
 
 ### all private (Need a GCE instance with RDP access)
 
+![image](https://user-images.githubusercontent.com/11318604/128716764-907d3955-a76b-408a-8c28-10a25f894794.png)
+
 ## Step 5
 
 ### CloudCode Goodness
+
+![image](https://user-images.githubusercontent.com/11318604/128716882-dce13846-4c24-4b5d-a94e-02e1cfd5d03f.png)
+
+## Step 6
+
+### Using other cloud services.
+
+![image](https://user-images.githubusercontent.com/11318604/128717042-3fb28a89-8e5d-4ddc-b641-096abc2ba769.png)
+
+
