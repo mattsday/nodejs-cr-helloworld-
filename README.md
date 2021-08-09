@@ -1,66 +1,34 @@
+## Work in progress
+
 # Cloud Run Hello World Sample
 
 [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
-This sample shows how to deploy a Hello World application to Cloud Run.
+This sample shows how to deploy a Hello World application to Cloud Run using the Deploy to Cloud Run Button - we then expand on this to set up Continuous deployment on cloud run.
 
-For more details on how to work with this sample read the [Google Cloud Run Node.js Samples README](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/tree/master/run).
+You will need to configure GKE with Cloud Run for Anthos.
 
-## Local Development
+## Step 1
 
-### `npm run e2e-test`
+### Press the Button (hold ctrl and press to open a new tab or you leave the repo):
 
-```
-export SERVICE_NAME=helloworld
-export CONTAINER_IMAGE=gcr.io/${GOOGLE_CLOUD_PROJECT}/helloworld
-npm run e2e-test
-```
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
-## Using Testing Scripts
+Once cloud shell opens talk through the process of showing on Cloud Shell, building and pushing the container using Cloud Build, then deploying to CR.
 
-### url.sh
+Once the deployment is completed press the URL to show it's worked.
 
-The `url.sh` script derives the automatically provisioned URL of a deployed
-Cloud Run service.
+## Step 2
 
-```sh
-export SERVICE_NAME=helloworld
-export REGION=us-central1
-test/url.sh
-```
+### Set Up continuous Deployment
 
-### deploy.sh
 
-The `deploy.sh` script deploys a Cloud Run service.
 
-```sh
-export SERVICE_NAME=helloworld
-export CONTAINER_IMAGE=gcr.io/${GOOGLE_CLOUD_PROJECT}/helloworld
-export REGION=us-central1
-test/deploy.sh
-```
+## Step 3
 
-### runner.sh
+### Deploy on CRfA setp continuous Deployment with build packs
 
-The `runner.sh` script:
+## Step 4
 
-* Deploys the service to Cloud Run based on the `deploy.sh` script.
-* Sets the `BASE_URL` and `ID_TOKEN` environment variables.
-* Runs any arguments passed to the `runner.sh` script.
-* Tears down the Cloud Run service on completion.
+### CloudCode Goodness
 
-```sh
-test/runner.sh sleep 20
-```
-
-## Environment Variables (Testing)
-
-* `BASE_URL`: Specifies the Cloud Run service URL for end-to-end tests.
-* `ID_TOKEN`: JWT token used to authenticate with Cloud Run's IAM-based authentication.
-* `REGION`: [`us-central1`] Optional override region for the location of the Cloud Run service.
-* `SERVICE_NAME`: The name of the deployed service, used in some API calls and test assertions.
-
-## Dependencies
-
-* **express**: Web server framework.
-* **got**: [Testing] Used to make HTTP requests of the running service in end-to-end testing.
