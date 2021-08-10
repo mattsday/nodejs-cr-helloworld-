@@ -49,6 +49,28 @@ Once the deployment is completed press the URL to show it's worked.
 
 ![image](https://user-images.githubusercontent.com/11318604/128716460-253cee2e-07d6-4f0c-b6e9-60b6c35868c4.png)
 
+* [go to the Google cloud console] (https://console.cloud.google.com/)
+* Select Cloud Run under the Serverless options
+* here you will see the deployment from step one, click into it
+![Screenshot from 2021-08-10 15-12-46](https://user-images.githubusercontent.com/11318604/128883388-f35c70d0-c4fb-4a16-86ed-603e508d24ca.png)
+* Select Set Up Continuous Deployment
+![Screenshot from 2021-08-10 15-15-45](https://user-images.githubusercontent.com/11318604/128883456-fc41aaac-5300-48a6-8877-e7bc00e1a74c.png)
+* Configure the source repositry (this uses Cloud Build)
+![Screenshot from 2021-08-10 15-20-40](https://user-images.githubusercontent.com/11318604/128884158-89be5edc-3ffa-4f11-928b-967bf68d9553.png)
+* Set the Branch to use and the buildtype (I use a Dockerfile here and Buildpacks for CRfA), press save.
+![Screenshot from 2021-08-10 15-24-43](https://user-images.githubusercontent.com/11318604/128884729-5fbf2aa0-0878-4a97-850f-9d9b691460d0.png)
+* The Cloud Build Trigger is now being created - I use this as an oppurunity to talk through the CR dashboards and logs as well as showing the YAML section. One completed you will see a build history at the top of the dashboard. Ctrl and Click into this for a new tab.
+![Screenshot from 2021-08-10 15-28-34](https://user-images.githubusercontent.com/11318604/128885432-45f883cd-9a77-4682-8549-26e7ed18d9b6.png)
+* Make a cahnge to in the index.js file, commit and push the change.
+* In the Cloud Build Tab you will now see the build process start - highlight the commit ID on the build reference to help with debugging/auditing of a change if needed. 
+![Screenshot from 2021-08-10 15-32-13](https://user-images.githubusercontent.com/11318604/128886106-93a8ebbb-b2fc-4dab-8019-f564cedb7490.png)
+* Click into the build and talk through the steps.
+![Screenshot from 2021-08-10 15-32-03](https://user-images.githubusercontent.com/11318604/128886376-943e89ea-aee3-40ea-b383-75c89fd65b36.png)
+* once the build is showing as complete, highlight the time taken and go to the page opened at the end of step 1 and refresh the page to show the change.
+![Screenshot from 2021-08-10 15-36-16](https://user-images.githubusercontent.com/11318604/128886701-04910749-6d74-47f1-9caf-b64510935612.png)
+* reenforce all of this was done automatically form Cloud Run
+
+
 ## Step 3
 
 ### Deploy on CRfA setp continuous Deployment with build packs
