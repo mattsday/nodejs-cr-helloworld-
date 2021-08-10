@@ -73,9 +73,11 @@ Once the deployment is completed press the URL to show it's worked.
 
 ## Step 3
 
-### Deploy on CRfA setp continuous Deployment with build packs
+### Deploy on CRfA setp continuous Deployment with buildpacks
 
-![image](https://user-images.githubusercontent.com/11318604/128716559-2f85ec2f-37ef-4a4c-93d5-b75d76d56095.png)
+![image](https://user-images.githubusecontent.com/11318604/128716559-2f85ec2f-37ef-4a4c-93d5-b75d76d56095.png)
+* **A GKE Cluster with Cloud Run for Anthos is required to be pre configured.** I also recommend pre deploying the first service prior to the demo, to jump straight into the Continuous Deployment set up.
+*  
 
 ## Step 4
 
