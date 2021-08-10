@@ -76,16 +76,37 @@ Once the deployment is completed press the URL to show it's worked.
 ### Deploy on CRfA setp continuous Deployment with buildpacks
 
 ![image](https://user-images.githubusercontent.com/11318604/128716559-2f85ec2f-37ef-4a4c-93d5-b75d76d56095.png)
-* **A Anthos GKE Cluster with Cloud Run for Anthos is required to be pre configured. this can take upto 15 minutes to create**
-*  Go to the cloud run for Anthos page on Google Cloud Console and select 'Create Service'
+
+* **An Anthos GKE Cluster with Cloud Run for Anthos is required to be pre configured. this can take upto 15 minutes to create**
+* **Run through this once before demoing as we need to set up a Custom DNS Map more detail [here](https://cloud.google.com/anthos/run/docs/default-domain)you cannot access the CRfA service on http://IP alone**
+
+*  Go to the cloud run for Anthos page on Google Cloud Console and select 'Create Service'.
 ![Screenshot from 2021-08-10 16-10-01](https://user-images.githubusercontent.com/11318604/128892734-6ff09f90-777d-4889-81e3-dda632f7ee9e.png)
-* Select the Cluster that will be used for deployment, the namespace and giuve the service a name. press 'next'
+* Select the Cluster that will be used for deployment, the namespace and giuve the service a name. press 'next'.
 ![Screenshot from 2021-08-10 16-13-34](https://user-images.githubusercontent.com/11318604/128892933-2caa8afc-d147-4481-9b07-44f40ab0d702.png)
-* in the next section select 'Continuously deploy new revisions from a source repository' and 'Set Up With Cloud Build'
+* in the next section select 'Continuously deploy new revisions from a source repository' and 'Set Up With Cloud Build'.
 ![Screenshot from 2021-08-10 16-15-55](https://user-images.githubusercontent.com/11318604/128893179-9f09f132-7878-4164-abf8-6e9d02da4c94.png)
-* As in step 2 select the repository however this time choose the 'Build Type' as *buildpacks* and press 'Save' then 'Next'
+* As in step 2 select the repository however this time choose the 'Build Type' as *buildpacks* and press 'Save' then 'Next'. Make sure the Source Branch is '^main$' or similair CRfA sets this to '^master$' by default which doesn't work unless you rename the branch.
 ![Screenshot from 2021-08-10 16-16-39](https://user-images.githubusercontent.com/11318604/128893488-d2efdc6d-6092-45a2-92e7-5fcfa6f6d589.png)
-* Leave 'Connectivity' as 'External' and press 'Create'
+* Leave 'Connectivity' as 'External' and press 'Create'.
+* Go to revisions on the Console and you will see a placeholder service we now have two options to to deploy the service.
+1. Go to Cloud Build and Triggers in the console and press 'RUN' on the trigger.
+![Screenshot from 2021-08-10 20-14-27](https://user-images.githubusercontent.com/11318604/128921709-16b1fb9a-8502-424e-a8ba-af95459ad0b4.png)
+2. make a change to the index.js file then commit and push the code - remember this will also trigger the pipeline we set up in step 2.
+
+** Set Up Custom DNS Mapping **
+* Go into the Service running on CRfA and press the Little i at the side of the URL (This URL does not work extrernally), in the side menu you will a curl command, at the end of this you will see the services IP address **NOTE THIS DOWN**
+![Screenshot from 2021-08-10 20-30-34](https://user-images.githubusercontent.com/11318604/128923841-68245106-11eb-4385-82c4-e8bce98137a4.png)
+![Screenshot from 2021-08-10 20-30-56](https://user-images.githubusercontent.com/11318604/128923879-08577395-8c0c-466f-8afa-c78f93d95956.png)
+* Go back to the main CRfA page and select 'Manage Custom Domains'.
+![Screenshot from 2021-08-10 20-27-41](https://user-images.githubusercontent.com/11318604/128924022-eed970bc-1667-4783-af4d-5c0f4f0480d1.png)
+* Select 'Add Mapping' > 'Add Service Domain Mapping'.
+![Screenshot from 2021-08-10 20-38-18](https://user-images.githubusercontent.com/11318604/128924187-fa8705d8-fc69-4604-a164-10c5b81ad068.png)
+* Select the service to map to from the drop down list and in the domain name enter the '$IP.nip.io' where the IP is what was noted down above.
+![Screenshot from 2021-08-10 20-39-25](https://user-images.githubusercontent.com/11318604/128924403-8d53ead6-7bb7-49fd-98b5-43e005d6fb29.png)
+* press 'Done', open a new tab and enter the Domain and you should have access to the service.
+
+If you are demoing this I would suggest removing the Cloud Build Trigger created, so you can show the creation process again during the demo, however as the service is already pre deployed you don't need to redo the DNS Mapping as it's already there.
 
 
 
