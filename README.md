@@ -76,8 +76,19 @@ Once the deployment is completed press the URL to show it's worked.
 ### Deploy on CRfA setp continuous Deployment with buildpacks
 
 ![image](https://user-images.githubusercontent.com/11318604/128716559-2f85ec2f-37ef-4a4c-93d5-b75d76d56095.png)
-* **A GKE Cluster with Cloud Run for Anthos is required to be pre configured.** I also recommend pre deploying the first service prior to the demo, to jump straight into the Continuous Deployment set up.
-*  
+* **A Anthos GKE Cluster with Cloud Run for Anthos is required to be pre configured. this can take upto 15 minutes to create**
+*  Go to the cloud run for Anthos page on Google Cloud Console and select 'Create Service'
+![Screenshot from 2021-08-10 16-10-01](https://user-images.githubusercontent.com/11318604/128892734-6ff09f90-777d-4889-81e3-dda632f7ee9e.png)
+* Select the Cluster that will be used for deployment, the namespace and giuve the service a name. press 'next'
+![Screenshot from 2021-08-10 16-13-34](https://user-images.githubusercontent.com/11318604/128892933-2caa8afc-d147-4481-9b07-44f40ab0d702.png)
+* in the next section select 'Continuously deploy new revisions from a source repository' and 'Set Up With Cloud Build'
+![Screenshot from 2021-08-10 16-15-55](https://user-images.githubusercontent.com/11318604/128893179-9f09f132-7878-4164-abf8-6e9d02da4c94.png)
+* As in step 2 select the repository however this time choose the 'Build Type' as *buildpacks* and press 'Save' then 'Next'
+![Screenshot from 2021-08-10 16-16-39](https://user-images.githubusercontent.com/11318604/128893488-d2efdc6d-6092-45a2-92e7-5fcfa6f6d589.png)
+* Leave 'Connectivity' as 'External' and press 'Create'
+
+
+
 
 ## Step 4
 
